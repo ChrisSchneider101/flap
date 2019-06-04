@@ -1,7 +1,7 @@
 Game = function(par) {
 	this.bird_size = 96; //96
 	this.bird_x_offset_scale = .3;
-	this.bird_gravity_acl = .2;
+	this.bird_gravity_acl = .15; // .2
 	this.bird_terminal_vel = 10;
 	this.bird_jump_vel = -9;
 	
@@ -15,7 +15,7 @@ Game = function(par) {
 	this.window_div.style.top = 0;
 	
 	this.mobile_div = document.createElement("div");
-	this.mobile_div.style.height = 50;
+	//this.mobile_div.style.height = 50;
 	this.mobile_div.style.width = 120;
 	this.mobile_div.style.backgroundColor = "white";
 	this.mobile;
@@ -24,6 +24,7 @@ Game = function(par) {
 	else this.mobile = false;
 	if (this.mobile) this.mobile_div.innerHTML = "MOBILE";
 	else this.mobile_div.innerHTML = "DESKTOP";
+	this.mobile_div.innerHTML += "<br>v2<br>gravity .2 -> .15 (little more floaty)";
 	this.window_div.appendChild(this.mobile_div);
 	
 	
