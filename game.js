@@ -1,6 +1,10 @@
 Game = function(par) {
 	this.bird_size = 32;
 	this.bird_x_offset_scale = .3;
+	this.bird_gravity_acl = .5;
+	this.bird_terminal_vel = 10;
+	this.bird_jump_vel = -10;
+	
 	
 	this.window_div = document.createElement("div");
 	this.window_div.style.height = window.innerHeight;
@@ -51,9 +55,34 @@ Game = function(par) {
 	this.birdMinY = function() { return this.bird_y; }
 	this.birdMaxY = function() { return this.bird_y + this.bird_size; }
 	
+	this.click_detected = function() {
+		console.log("click");
+		if (!this.mobile) this.tap();
+	}
+	this.touch_detected = function() {
+		console.log("touch");
+		if (this.mobile) this.tap();
+	}
+	
 	this.tap = function() {
+		this.bird_vel = this.bird_jump_vel;
 		console.log("hit");
 	}
+	
+	this.bird_vel = 0;	//can be a decimal
+	
+	this.getBirdVel = function() { return Math.round(this.bird_velocity); }
+	
+	this.gravity_interval = setInterval(function() {
+		this.bird_vel += this.bird_gravity_acl;
+		if (this.bird_vel > this.bird_terminal_vel) this.bird_vel = this.bird_terminal_vel;
+		this.setBirdY(this.bird_y + this.bird_vel);
+		if (this.bird_y > this.window_max_y) {
+			this.setBirdY(this.window_max_y);
+			this.bird_vel = 0;
+		}
+	}.bind(this), 5);
+	
 	
 	
 	par.appendChild(this.window_div);
