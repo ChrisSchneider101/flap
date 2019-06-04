@@ -1,9 +1,9 @@
 Game = function(par) {
-	this.bird_size = 32;
+	this.bird_size = 96;
 	this.bird_x_offset_scale = .3;
 	this.bird_gravity_acl = .5;
-	this.bird_terminal_vel = 10;
-	this.bird_jump_vel = -10;
+	this.bird_terminal_vel = 7;
+	this.bird_jump_vel = -7;
 	
 	
 	this.window_div = document.createElement("div");
