@@ -1,5 +1,5 @@
 Game = function(par) {
-	this.bird_size = 96;
+	this.bird_size = 200; //96
 	this.bird_x_offset_scale = .3;
 	this.bird_gravity_acl = .5;
 	this.bird_terminal_vel = 7;
@@ -37,7 +37,7 @@ Game = function(par) {
 	this.bird_div = document.createElement("div");
 	this.bird_div.style.height = this.bird_size;
 	this.bird_div.style.width = this.bird_size;
-	this.bird_div.style.backgroundColor = "blue";
+	this.bird_div.style.backgroundColor = "green"; //blue
 	this.bird_div.style.position = "absolute";
 	this.bird_div.style.left = window.innerWidth * this.bird_x_offset_scale;
 	
