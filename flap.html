@@ -3,11 +3,12 @@
 	<title>flap</title>
 </head>
 
-<body>
+<body onmousedown="game.tap()" ontouchstart="game.tap()">
 
 <script src="game.js"></script>
 <script>
 	var game = new Game(document.body);
+	game.setBirdY(0);
 	
 </script>
 
