@@ -18,7 +18,7 @@ PipePair = function(par, width, gap, y_position) {
 	this.top_div.style.width = this.pipe_width;
 	this.top_div.style.top = 0;
 	this.top_div.style.left = 0;
-	this.top_div.style.touchAction = "none";
+	this.top_div.addEventListener("click", event => {});
 	
 	this.bottom_div.style.backgroundColor = "rgb(100, 200, 100)";
 	this.bottom_div.style.position = "absolute";
@@ -26,7 +26,7 @@ PipePair = function(par, width, gap, y_position) {
 	this.bottom_div.style.width = this.pipe_width;
 	this.bottom_div.style.top = this.pipe_y_offset + this.pipe_gap;
 	this.bottom_div.style.left = 0;
-	this.bottom_div.style.touchAction = "none";
+	this.bottom_div.addEventListener("click", event => {});
 	
 	this.container.style.backgroundColor = "rgb(255, 200, 200)";
 	this.container.style.position = "absolute";
@@ -34,7 +34,7 @@ PipePair = function(par, width, gap, y_position) {
 	this.container.style.left = this.pipe_x_offset; // spawn just offscreen
 	this.container.style.height = window.innerHeight;
 	this.container.style.width = this.pipe_width;
-	this.container.style.touchAction = "none";
+	this.container.addEventListener("click", event => {});
 	
 	// takes integers
 	this.setPipeX = function(x) {

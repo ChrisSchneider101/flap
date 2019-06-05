@@ -39,31 +39,31 @@
 	<div id="game"></div>
 </main>
 
-<section id="a_section">this is a section</section>
+<!--<section id="a_section">this is a section</section>
 <br>
 <div id="a_div">this is a div</div>
 <br>
 <button id="a_button">this is a button</button>
 <br>
-<a id="a_ref" href="#">this is an a href</a>
+<a id="a_ref" href="#">this is an a href</a>-->
 
 <script src="game.js"></script>
 <script>
 	//var game = new Game(document.body);
-	//var game = new Game(document.getElementById("game"));
+	var game = new Game(document.getElementById("game"));
 	//game.setBirdY(0);
 	
-	document.getElementById("a_section").addEventListener("click", event => {});
-	document.getElementById("a_button").addEventListener("click", event => {});
-	document.getElementById("a_div").addEventListener("click", event => {});
+	//document.getElementById("a_section").addEventListener("click", event => {});
+	//document.getElementById("a_button").addEventListener("click", event => {});
+	//document.getElementById("a_div").addEventListener("click", event => {});
 	
-	document.addEventListener("touchstart", event => {
+	/*document.addEventListener("touchstart", event => {
 		if(event.touches.length > 1) {
 			console.log("zoom plz stahp");
 			event.preventDefault();
 			event.stopPropagation(); // maybe useless
 		}
-	}, {passive: false});
+	}, {passive: false});*/
 	
 </script>
 
