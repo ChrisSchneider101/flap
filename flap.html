@@ -58,12 +58,12 @@
 	document.getElementById("a_div").addEventListener(click, event => {});
 	
 	document.addEventListener("touchstart", event => {
-    if(event.touches.length > 1) {
-        console.log("zoom plz stahp");
-        event.preventDefault();
-        event.stopPropagation(); // maybe useless
-    }
-}, {passive: false});
+		if(event.touches.length > 1) {
+			console.log("zoom plz stahp");
+			event.preventDefault();
+			event.stopPropagation(); // maybe useless
+		}
+	}, {passive: false});
 	
 </script>
 
