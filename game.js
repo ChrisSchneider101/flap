@@ -8,9 +8,9 @@ PipePair = function(par, width, gap, y_position) {
 	this.min_y_offset = 0
 	this.max_y_offset = window.innerHeight - this.pipe_gap;
 	
-	this.top_div = document.createElement("div");
-	this.bottom_div = document.createElement("div");
-	this.container = document.createElement("div");
+	this.top_div = document.createElement("div");	//div
+	this.bottom_div = document.createElement("div");//div
+	this.container = document.createElement("div");	//div
 	
 	this.top_div.style.backgroundColor = "rgb(100, 200, 100)";
 	this.top_div.style.position = "absolute";
@@ -18,6 +18,7 @@ PipePair = function(par, width, gap, y_position) {
 	this.top_div.style.width = this.pipe_width;
 	this.top_div.style.top = 0;
 	this.top_div.style.left = 0;
+	this.top_div.style.touchAction = "none";
 	
 	this.bottom_div.style.backgroundColor = "rgb(100, 200, 100)";
 	this.bottom_div.style.position = "absolute";
@@ -25,6 +26,7 @@ PipePair = function(par, width, gap, y_position) {
 	this.bottom_div.style.width = this.pipe_width;
 	this.bottom_div.style.top = this.pipe_y_offset + this.pipe_gap;
 	this.bottom_div.style.left = 0;
+	this.bottom_div.style.touchAction = "none";
 	
 	this.container.style.backgroundColor = "rgb(255, 200, 200)";
 	this.container.style.position = "absolute";
@@ -32,6 +34,7 @@ PipePair = function(par, width, gap, y_position) {
 	this.container.style.left = this.pipe_x_offset; // spawn just offscreen
 	this.container.style.height = window.innerHeight;
 	this.container.style.width = this.pipe_width;
+	this.container.style.touchAction = "none";
 	
 	// takes integers
 	this.setPipeX = function(x) {
@@ -62,9 +65,10 @@ Game = function(par) {
 	
 	this.pipe_width = this.bird_size * 2;
 	this.pipe_spawn_delay = 750; // 750 // 200
-	this.pipe_initial_gap = 45; //this.bird_size * 5 // 25
+	this.pipe_initial_gap = this.bird_size * 5; //this.bird_size * 5 // 45
 	this.pipe_initial_vel = -2; //can be a decimal; -2
 	
+	// window div initialization
 	this.window_div = document.createElement("div");
 	this.window_div.style.height = window.innerHeight;
 	this.window_div.style.width = window.innerWidth;
@@ -74,6 +78,7 @@ Game = function(par) {
 	this.window_div.style.top = 0;
 	this.window_div.style.overflow = "hidden";
 	
+	// mobile div initialization
 	this.mobile_div = document.createElement("div");
 	//this.mobile_div.style.height = 50;
 	this.mobile_div.style.width = 120;
@@ -85,9 +90,10 @@ Game = function(par) {
 	else this.mobile = false;
 	if (this.mobile) this.mobile_div.innerHTML = "MOBILE";
 	else this.mobile_div.innerHTML = "DESKTOP";
-	this.mobile_div.innerHTML += "<br>v3<br>p i p e b o y s";
+	this.mobile_div.innerHTML += "<br>v4<br>p i p e b o y s<br>trying div prop";
 	this.window_div.appendChild(this.mobile_div);
 	
+	// pipe initalization
 	this.pipes = new Array();
 	
 	this.spawnPipe = function(gap, y_position) {
@@ -97,10 +103,10 @@ Game = function(par) {
 	
 	// ceiling
 	this.window_min_y = 0;
-	
 	// floor
 	this.window_max_y = window.innerHeight - this.bird_size;
 	
+	// bird div initialization
 	this.bird_div = document.createElement("div");
 	this.bird_div.style.height = this.bird_size;
 	this.bird_div.style.width = this.bird_size;

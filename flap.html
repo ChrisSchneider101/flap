@@ -1,13 +1,17 @@
 <html>
 <head>
 	<title>flap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 
 <body ontouchstart="game.touch_detected()" onmousedown="game.click_detected()">
 
+<div id="game"></div>
+
 <script src="game.js"></script>
 <script>
-	var game = new Game(document.body);
+	//var game = new Game(document.body);
+	var game = new Game(document.getElementById("game"));
 	game.setBirdY(0);
 	
 </script>
