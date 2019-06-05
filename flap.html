@@ -33,7 +33,7 @@
 	</style>
 </head>
 
-<body style="touch-action:manipulation" ontouchstart="game.touch_detected()" onmousedown="game.click_detected()">
+<body ontouchstart="game.touch_detected()" onmousedown="game.click_detected()">
 
 <main>
 	<div id="game"></div>
@@ -48,6 +48,7 @@
 <a id="a_ref" href="#">this is an a href</a>-->
 
 <script src="game.js"></script>
+<script src="cookies.js"></script>
 <script>
 	//var game = new Game(document.body);
 	var game = new Game(document.getElementById("game"));
