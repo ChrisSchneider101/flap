@@ -1,17 +1,43 @@
 <html>
 <head>
 	<title>flap</title>
+	<style>
+		#a_section {
+			background-color:blue;
+			color:white;
+			width:300px;
+			height:300px;
+		}
+		#a_span {
+			background-color:blue;
+			color:white;
+			width:300px;
+			height:300px;
+		}
+		#a_div {
+			background-color:blue;
+			color:white;
+			width:300px;
+			height:300px;
+		}
+	</style>
 </head>
 
-<body ontouchstart="game.touch_detected()" onmousedown="game.click_detected()">
+<body style="touch-action:manipulation" ontouchstart="game.touch_detected()" onmousedown="game.click_detected()">
 
-<div id="game"></div>
+<main>
+	<div id="game"></div>
+</main>
+
+<section id="a_section">this is a section</section>
+<br>
+<div id="a_div">this is a div</div>
 
 <script src="game.js"></script>
 <script>
 	//var game = new Game(document.body);
-	var game = new Game(document.getElementById("game"));
-	game.setBirdY(0);
+	//var game = new Game(document.getElementById("game"));
+	//game.setBirdY(0);
 	
 </script>
 

@@ -90,7 +90,7 @@ Game = function(par) {
 	else this.mobile = false;
 	if (this.mobile) this.mobile_div.innerHTML = "MOBILE";
 	else this.mobile_div.innerHTML = "DESKTOP";
-	this.mobile_div.innerHTML += "<br>v5<br>oh my god what have i dont to the scale<br>trying div prop";
+	this.mobile_div.innerHTML += "<br>v6<br>i hate ios safari";
 	this.window_div.appendChild(this.mobile_div);
 	
 	// pipe initalization
@@ -113,9 +113,10 @@ Game = function(par) {
 	this.bird_div.style.backgroundColor = "green"; //blue
 	this.bird_div.style.position = "absolute";
 	this.bird_div.style.left = window.innerWidth * this.bird_x_offset_scale;
+	this.bird_div.style.top = 0;
 	
 	this.bird_x = window.innerWidth * this.bird_x_offset_scale;
-	this.bird_y;
+	this.bird_y = 0;
 	
 	// only change bird_y through this
 	this.setBirdY = function(y) {
