@@ -9,14 +9,14 @@
 			height:300px;
 		}
 		#a_button {
-			background-color:blue;
+			background-color:green;
 			color:white;
 			width:300px;
 			height:300px;
 			border: none 0;
 		}
 		#a_div {
-			background-color:blue;
+			background-color:red;
 			color:white;
 			width:300px;
 			height:300px;
@@ -52,6 +52,18 @@
 	//var game = new Game(document.body);
 	//var game = new Game(document.getElementById("game"));
 	//game.setBirdY(0);
+	
+	document.getElementById("a_section").addEventListener(click, event => {});
+	document.getElementById("a_button").addEventListener(click, event => {});
+	document.getElementById("a_div").addEventListener(click, event => {});
+	
+	/*document.addEventListener("touchstart", event => {
+    if(event.touches.length > 1) {
+        console.log("zoom plz stahp");
+        event.preventDefault();
+        event.stopPropagation(); // maybe useless
+    }
+}, {passive: false});*/
 	
 </script>
 
