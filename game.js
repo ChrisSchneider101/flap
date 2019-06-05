@@ -90,7 +90,7 @@ Game = function(par) {
 	else this.mobile = false;
 	if (this.mobile) this.mobile_div.innerHTML = "MOBILE";
 	else this.mobile_div.innerHTML = "DESKTOP";
-	this.mobile_div.innerHTML += "<br>v4<br>p i p e b o y s<br>trying div prop";
+	this.mobile_div.innerHTML += "<br>v5<br>oh my god what have i dont to the scale<br>trying div prop";
 	this.window_div.appendChild(this.mobile_div);
 	
 	// pipe initalization
