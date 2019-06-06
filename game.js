@@ -124,7 +124,7 @@ Game = function(par) {
 	this.bird_div = document.createElement("div");
 	this.bird_div.style.height = this.bird_size;
 	this.bird_div.style.width = this.bird_size;
-	this.bird_div.style.backgroundColor = "green"; //blue
+	this.bird_div.style.backgroundColor = "blue"; //green
 	this.bird_div.style.position = "absolute";
 	this.bird_div.style.left = window.innerWidth * this.bird_x_offset_scale;
 	this.bird_div.style.top = 0;
@@ -191,6 +191,7 @@ Game = function(par) {
 	this.postgame_div.style.textAlign = "center";
 	this.postgame_div.style.fontSize = 40;
 	this.postgame_div.style.color = "white";
+	this.cover_div.addEventListener("click", event => {});
 	
 	this.click_detected = function() {
 		console.log("click");
@@ -205,7 +206,7 @@ Game = function(par) {
 		this.bird_vel = this.bird_jump_vel;
 		console.log("hit");
 		if (this.game_ready) this.start();
-		else if (this.reset_ready) this.setUp();
+		if (this.reset_ready) this.setUp();
 	}
 	
 	this.gameOver = function() {
